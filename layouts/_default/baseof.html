@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<script>
+    newpath =
+        window.location.href.replace(
+        "://trentmilton.gitlab.io",
+        "://trentmilton.com"
+    );
 
+    // Prevent infinite redirect
+    if (window.location.href != newpath) {
+        window.location.replace(newpath);
+    }
+</script>
 <head>
     {{- partial "head.html" . }}
 </head>
